@@ -29,7 +29,7 @@ if ($_POST) {
 		$submission = "<br><br><h2>Your submission has been sent. Thank you</h2><br><br>";
 	}	
 }
-// delete localstorage, make new local data saying form complete
+// TODO: delete localstorage, make new local data saying form complete
 ?>
 <!DOCTYPE html>
 <html lang="en-gb">
@@ -168,12 +168,12 @@ if ($_POST) {
 			var file_data = $('#file' + rowposition).prop('files')[0];
 			var form_data = new FormData();
 			
-			//TEMP HARDFIX TO RENAME FILE
-			// EDIT LATER TO INHERIT TICKETID
+			//
+			// No longer a hard fix
 			var ticketid = window.location.search;
 			ticketid = ticketid.replace("?ticket=", ''); 
 
-			// ASSUMES JPG - ADD PNG FIX
+			// TODO: ASSUMES JPG - ADD PNG FIX
 			form_data.append('file', file_data, ticketid + '-' + rowposition + '.jpg');
 			$.ajax({
 				url: 'uploadimage.php', 
