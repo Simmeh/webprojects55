@@ -232,11 +232,6 @@ if ($_POST) {
           </tr>
         </tbody>
       </table>
-<!--      <script>
-        var ticketid = window.location.search;
-        ticketid = ticketid.replace("?ticket=", ''); 
-        document.getElementById('ticketnum').innerHTML = ticketid;
-    </script> -->
       <p>
 	  <b>Instructions</b><br>
 	  Every product you add needs a name and a price. Choosing a category, quantity, description and photo is also recommended. 
